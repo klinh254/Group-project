@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 function fetchChallengeDetails(id) {
-    fetch(`../../../backend/get_challenge.php?id=${id}`)
+    fetch(`../../backend/get_challenge.php?id=${id}`)
         .then(response => response.json())
         .then(data => {
             if (data.error) {

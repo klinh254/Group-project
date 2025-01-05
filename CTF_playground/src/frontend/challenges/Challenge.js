@@ -1,6 +1,6 @@
 // Fetch and display all challenges
 function fetchChallenges() {
-    fetch('../../..challenge.php')
+    fetch('../../../backend/challenge.php')
         .then(response => response.json())
         .then(challenges => {
             const challengeList = document.getElementById('challenge-list');

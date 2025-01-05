@@ -15,7 +15,7 @@ CREATE TABLE challenges (
   description TEXT,
   difficulty VARCHAR(10),                            
   points INT NOT NULL,                         
-  flag VARCHAR(40) NOT NULL UNIQUE,
+  flag VARCHAR(50) NOT NULL UNIQUE,
   time TIME DEFAULT NULL,
   hint VARCHAR(125)
 );
@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS submissions (
   submission_id INT AUTO_INCREMENT PRIMARY KEY,
   user_id INT,
   challenge_id INT,
-  flag_submitted VARCHAR(40),
+  flag_submitted VARCHAR(50),
   is_correct BOOLEAN,
   submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE,
@@ -69,9 +69,9 @@ VALUES
 ('Bypass2', 'The challenge requires bypassing through multiple stages to get the flag.', 50, 'CTF{multiple_bypass_success}', 'medium', 20);
 INSERT INTO users (username, password_hash) 
 VALUES 
-('player1', 'hashed_password1'),
-('player2', 'hashed_password2'),
-('player3', 'hashed_password3');
+('Lan', 'hashed_password1'),
+('Linh', 'hashed_password2'),
+('Bao', 'hashed_password3');
 
 INSERT INTO submissions (user_id, challenge_id, flag_submitted, is_correct) 
 VALUES 
