@@ -165,7 +165,7 @@ function submitFlag() {
                 message.style.color = 'green';
 
                 setTimeout(() => {
-                    window.location.href = 'challenge.html';
+                    window.location.href = '../Challenges/challenge.html';
                 }, 2000); 
             } else {
                 message.textContent = data.message;
