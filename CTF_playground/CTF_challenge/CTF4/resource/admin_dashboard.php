@@ -7,4 +7,3 @@ if (isset($_COOKIE['role']) && $_COOKIE['role'] === 'admin') {
     echo "You are not admin!!";
 }
 ?>
-
